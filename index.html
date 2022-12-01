@@ -31,26 +31,79 @@
 
       /* Write CSS Here */
 
+      .two-column-grid__expand-two {
+        display: grid;
+        grid-template-columns: 125px 1fr;
+        gap: 10px;
+      }
+
+      .two-column-grid__expand-two .logo {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 4px;
+        border: 2px dotted lightseagreen;
+      }
+
       .three-column-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
       }
 
       .three-column-grid__expand-two {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 10px;
       }
 
       .five-column-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
       }
 
       .center-grid {
+        display: grid;
+        align-items: center;
+        justify-items: center;
       }
 
       .centered {
+        width: 200px;
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
-      .two-column-grid {
+      .two-column-grid.container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+        gap: 10px;
       }
+
+      .two-column-grid.container .box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+        gap: 10px;
+      }
+
+      /* .three-column-grid-with-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+      } */
+
+      .three-column-grid-with-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 10px;
+      }
+
+      .three-column-grid-with-grid .box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+        gap: 10px;
+      }
+
     </style>
   </head>
   <body>
@@ -112,7 +165,7 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
+      <div class="container three-column-grid-with-grid">
         <div class="box">
           <div class="inner-box"></div>
         </div>
